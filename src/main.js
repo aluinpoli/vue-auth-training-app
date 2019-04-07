@@ -5,8 +5,10 @@ import store from './store'
 import VueI18n from 'vue-i18n'
 import en from '@/lang/en'
 import Api from '@/services/ApiService'
+import VueSweetalert2 from 'vue-sweetalert2'
 
 Vue.use(VueI18n)
+Vue.use(VueSweetalert2)
 Vue.config.productionTip = false
 Vue.prototype.$api = Api
 
