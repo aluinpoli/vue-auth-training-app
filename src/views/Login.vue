@@ -41,6 +41,7 @@ export default {
         .then((response) => {
           // when its done we set isLoading to false.
           this.isLoading = false
+          this.$router.push({ name: 'home' })
         })
         .catch((error) => {
           // if there was an error in the API, we show it.
