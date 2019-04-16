@@ -5,12 +5,14 @@ import store from './store'
 import VueI18n from 'vue-i18n'
 import en from '@/lang/en'
 import Api from '@/services/ApiService'
-import VueSweetalert2 from 'vue-sweetalert2'
+import Swal from '@/services/AlertService'
+
+import 'sweetalert2/src/sweetalert2.scss'
 
 Vue.use(VueI18n)
-Vue.use(VueSweetalert2)
 Vue.config.productionTip = false
 Vue.prototype.$api = Api
+Vue.prototype.$alert = Swal
 
 const i18n = new VueI18n({
   locale: 'en',
