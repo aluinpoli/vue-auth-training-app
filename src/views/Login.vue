@@ -41,17 +41,18 @@ export default {
         .then((response) => {
           // when its done we set isLoading to false.
           this.isLoading = false
+          this.$notify.success({})
+          this.$router.push({ name: 'home' })
         })
         .catch((error) => {
           // if there was an error in the API, we show it.
           this.isLoading = false
           this.errorMessage = error.response.data.error
+          this.$notify.error({
+            text: this.errorMessage
+          })
         })
     }
   }
 }
 </script>
-
-<style lang='scss'>
-
-</style>

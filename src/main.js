@@ -7,12 +7,10 @@ import en from '@/lang/en'
 import Api from '@/services/ApiService'
 import Swal from '@/services/AlertService'
 
-import 'sweetalert2/src/sweetalert2.scss'
-
 Vue.use(VueI18n)
 Vue.config.productionTip = false
 Vue.prototype.$api = Api
-Vue.prototype.$alert = Swal
+Vue.prototype.$notify = Swal
 
 const i18n = new VueI18n({
   locale: 'en',

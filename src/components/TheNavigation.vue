@@ -32,7 +32,11 @@ export default {
             auth: true
           },
           // action to trigger. We pass a function as a property.
-          action: () => this.$store.dispatch('logout')
+          action: () => this.$notify.confirmation({}).then((result) => {
+            if (result.value) {
+              this.$store.dispatch('logout')
+            }
+          })
         },
         {
           ...routes.about

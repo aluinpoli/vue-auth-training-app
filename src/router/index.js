@@ -23,7 +23,7 @@ const routerInstance = new Router({
     },
     {
       ...routes.cpanel,
-      path: '/cpane',
+      path: '/cpanel',
       component: load('Cpanel')
     },
     {

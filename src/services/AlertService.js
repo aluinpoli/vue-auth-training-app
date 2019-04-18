@@ -1,24 +1,34 @@
 import Swal from 'sweetalert2'
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 export default {
-
-  success () {
+  success (params) {
     return Swal.fire({
       type: 'success',
       title: 'Success',
-      text: 'your message has been sent',
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 1500
+      timer: 2000,
+      ...params
     })
   },
-  error () {
+  error (params) {
     return Swal.fire({
       type: 'error',
       title: 'Error',
-      text: 'couldn\'t send your message',
-      showConfirmButton: false,
-      timer: 2000
+      position: 'center',
+      timer: 2000,
+      ...params
+    })
+  },
+  confirmation () {
+    return Swal.fire({
+      title: 'Are you sure?',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, Log out!'
+    }).then((result) => {
+      return result
     })
   }
 }
