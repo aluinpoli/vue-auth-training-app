@@ -19,16 +19,15 @@ export default {
       ...params
     })
   },
-  confirmation () {
+  confirmation (params) {
     return Swal.fire({
       title: 'Are you sure?',
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, Log out!'
-    }).then((result) => {
-      return result
+      confirmButtonText: 'Yes, Log out!',
+      ...params
     })
   }
 }

@@ -41,7 +41,7 @@ export default {
         .then((response) => {
           // when its done we set isLoading to false.
           this.isLoading = false
-          this.$notify.success({})
+          this.$notify.success()
           this.$router.push({ name: 'home' })
         })
         .catch((error) => {
