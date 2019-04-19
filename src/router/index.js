@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import { routes } from './route-definitions'
+import { initMetaTags } from './route-meta'
 import { canAccess } from '../utils'
 
 Vue.use(Router)
@@ -47,5 +48,7 @@ routerInstance.beforeEach((to, from, next) => {
     next({ name: 'login' })
   }
 })
+
+routerInstance.beforeEach(initMetaTags)
 
 export default routerInstance
